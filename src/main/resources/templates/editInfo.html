@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>收银管理系统&nbsp;修改个人信息</title>
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/eventSlove.js"></script>
+    <link href="/css/MyCSS.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!--导航栏-->
+<nav class="ol" style="background-color: khaki;width:100%">
+    <h1 class="ol" style="color: blueviolet;margin-left: 7%">收银管理系统</h1>
+    <h2 class="ol"style="margin-left: 65%">修改信息</h2>
+    <a class="ol ml" href="/go_back"><h2>返回</h2></a>
+</nav>
+
+<table style="width: 100%;height: 70%" align="center">
+    <tr style="height: 130px"></tr>
+    <tr>
+        <td style="width: 42%"></td>
+        <td>
+            <table>
+                <tr>
+                    <td align="center"><h2 style="color: cornflowerblue">编辑个人信息</h2></td>
+                </tr>
+                <tr>
+                    <td><label th:text="'用&nbsp;&nbsp;户&nbsp;&nbsp;名：'+${session.account}"></label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="name">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</label>
+                        <input id="name" name="name" type="text" th:value="${userInfo.name}" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="telephone">手机号码：</label>
+                        <input id="telephone" name="telephone" type="text" th:value="${userInfo.telephone}" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="age">年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;龄：</label>
+                        <input id="age" name="age" type="text" th:value="${userInfo.age}" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div th:if="${userInfo.sex} eq 1">
+                            <label for="sex">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</label>
+                            <select id="sex" name="sex" required>
+                                <option value="1" selected="selected">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;男&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                <option value="0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;女&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                            </select>
+                        </div>
+
+                        <div th:if="${userInfo.sex} eq 0">
+                            <label for="sex">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</label>
+                            <select id="sex" name="sex" required>
+                                <option value="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;男&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                <option value="0" selected="selected">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;女&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <button onclick="modifyInfo()">修改</button>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

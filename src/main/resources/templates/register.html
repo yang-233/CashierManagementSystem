@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>收银管理系统&nbsp;注册</title>
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/eventSlove.js"></script>
+    <link href="/css/MyCSS.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+<!--导航栏-->
+<nav class="ol" style="background-color: khaki;width:100%">
+    <h1 class="ol" style="color: blueviolet;margin-left: 7%">收银管理系统</h1>
+    <a class="ol" href="/login" style="margin-left: 65%"><h2>登录</h2></a>
+    <a class="ol ml" href="/changePassword"><h2>修改密码</h2></a>
+    <a class="ol ml" href="/forgetPassword"><h2>忘记密码</h2></a>
+</nav>
+
+<div th:if="${msg}" align="center">
+    <h2 th:text="${msg}" style="color: red"></h2>
+</div>
+
+<table style="width: 100%;height: 70%" align="center">
+    <tr style="height: 130px"></tr>
+    <tr>
+        <td style="width: 42%"></td>
+        <td>
+            <form id="register_form" action="/register_submit" method="post">
+                <table>
+                    <tr>
+                        <td align="center"><h2 style="color: cornflowerblue">注册</h2></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="account">用&nbsp;&nbsp;户&nbsp;&nbsp;名：</label>
+                            <input id="account" name="account" type="text" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="password">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+                            <input id="password" name="password" type="password" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="question">密保问题：</label>
+                            <input id="question" name="question" type="text" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="answer">答&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;案：</label>
+                            <input id="answer" name="answer" type="text" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <input value="注册" type="submit">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </td>
+    </tr>
+</table>
+<div>
+
+</div>
+
+</body>
+</html>

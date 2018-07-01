@@ -1,0 +1,20 @@
+.mt {
+  margin-top: 6%;
+}
+.ml {
+  margin-left: 2%;
+}
+.ol {
+  position: relative;
+  float: left;
+}
+
+.mid {
+  align-content: center;
+}
+.td {
+  overflow:auto;
+}
+a{
+  text-decoration : none;
+}

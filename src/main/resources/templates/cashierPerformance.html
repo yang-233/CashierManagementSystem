@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>收银管理系统&nbsp;订单管理</title>
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/eventSlove.js"></script>
+    <script type="text/javascript" src="js/numeral.min.js"></script>
+    <link href="/css/MyCSS.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        $(document).ready(loadPerformance());
+    </script>
+</head>
+<body style="width: 100%">
+
+<!--导航栏-->
+<nav class="ol" style="background-color: khaki;width:100%">
+    <h1 class="ol" style="color: blueviolet;margin-left: 7%;position: relative;float: left">收银管理系统</h1>
+    <h2 style="margin-left: 65%;position: relative;float: left">收银员业绩</h2>
+    <a href="#" class="ml" onclick="window.history.back()"  style="position: relative;float: left">
+        <h2>返回</h2>
+    </a>
+</nav>
+
+<h2 style="width: 100%" align="center">收银员业绩</h2>
+<table id="container" width="100%" border="1px" bordercolor="#000000" cellspacing="0px">
+    <tr>
+        <th>收银员姓名</th>
+        <th>销售商品数</th>
+        <th>销售总价</th>
+    </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>收银管理系统&nbsp;库存管理</title>
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/eventSlove.js"></script>
+    <script type="text/javascript" src="js/numeral.min.js"></script>
+    <link href="/css/MyCSS.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        $(document).ready(getAllProducts());
+    </script>
+</head>
+<body style="width: 100%">
+
+<!--导航栏-->
+<nav class="ol" style="background-color: khaki;width:100%">
+    <h1 class="ol" style="color: blueviolet;margin-left: 7%">收银管理系统</h1>
+    <a class="ol" href="#" style="margin-left: 65%" onclick="window.history.back()"><h2>返回</h2></a>
+</nav>
+
+<div th:if="${msg}" class="ol" align="center">
+    <h2 th:text="${msg}" style="color: red"></h2>
+</div>
+<h2 style="width: 100%" align="center">现有产品</h2>
+<table id="containerUp" width="100%" border="1px" bordercolor="#000000" cellspacing="0px">
+    <tr>
+        <th>产品ID</th>
+        <th>产品名称</th>
+        <th>产品价格</th>
+        <th>剩余数量</th>
+        <th>总价</th>
+        <th>进货</th>
+    </tr>
+</table>
+<h3 id="resultContanier" style="width: 100%" align="center"></h3>
+<a onclick=""><h2 style="width: 100%" align="center">添加新产品</h2></a>
+<table width="100%" border="1px" bordercolor="#000000" cellspacing="0px">
+    <tr>
+        <th>商品名称</th>
+        <th>价格</th>
+        <th>进货数量</th>
+        <th>进货</th>
+    </tr>
+    <tr>
+        <td align="center"><input id="name" type="text"></td>
+        <td align="center"><input id="price" type="text"></td>
+        <td align="center"><input id="number" type="text"></td>
+        <td align="center"><button onclick="addNewProduct()">确定</button></td>
+    </tr>
+</table>
+
+</body>
+</html>

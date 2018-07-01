@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/eventSlove.js"></script>
+    <link href="/css/MyCSS.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!--导航栏-->
+<!--导航栏-->
+<nav class="ol" style="background-color: khaki;width:100%">
+    <h1 class="ol" style="color: blueviolet;margin-left: 7%">收银管理系统</h1>
+    <a class="ol" href="/collect_money" style="margin-left: 50%"><h2>收银</h2></a>
+    <a class="ol ml" href="/check_my_order"><h2>我的订单</h2></a>
+    <a class="ol ml" href="/check_my_performance"><h2>我的业绩</h2></a>
+    <a class="ol ml" href="/edit_info"><h2>编辑个人信息</h2></a>
+</nav>
+<h1 style="color: red;width: 100%" align="center" th:text="'欢迎您，收银员:'+${name}"></h1>
+</body>
+</html>

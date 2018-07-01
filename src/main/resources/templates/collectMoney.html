@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/eventSlove.js"></script>
+    <link href="/css/MyCSS.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            loadList();
+            showProducts();
+        });
+    </script>
+</head>
+<body>
+<!--导航栏-->
+<!--导航栏-->
+<nav class="ol" style="background-color: khaki;width:100%">
+    <h1 class="ol" style="color: blueviolet;margin-left: 7%">收银管理系统</h1>
+    <a class="ol" href="#" style="margin-left: 65%" onclick="window.history.back()"><h2>返回</h2></a>
+</nav>
+<table id="containerUp" width="100%" border="1px" bordercolor="#000000" cellspacing="0px">
+</table>
+
+<h2 style="width: 100%;color: aquamarine" align="center">购物车</h2>
+<table id="shoppingContain" width="100%" border="1px" bordercolor="#000000" cellspacing="0px">
+</table>
+
+<h2 id="totalNumber" style="margin-left: 10%">总量：0</h2>
+<h2 id="totalMoney" style="margin-left: 10%">总价：0</h2>
+<button style="margin-left: 95%;width: 5%;height: 50px" onclick="buy()">结算</button>
+</body>
+</html>
